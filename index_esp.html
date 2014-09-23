@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+<body>
+<!-- http://www.consultoriainnova.com/blog/css/jquery-masonry-columnas-como-pinterest/ -->
+<!-- http://community.sitepoint.com/t/jquery-masonry-problem/32059/2 -->
+<!-- http://www.gieson.com/Library/projects/utilities/countdown/ -->
+
+<script src="js/jquery-1.8.0.min.js"></script>
+<script src="js/jquery.masonry.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/countdown.js" type="text/javascript"></script>
+<script>
+/*
+$(document).ready(function(){
+	$('#container_A').masonry();
+});
+</script>
+<script>
+$(document).ready(function(){
+	$('#container_B').masonry();
+});
+*/
+</script>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic"/>
+<style>
+body {
+    font-family: Arimo, Arial, verdana, sans-serif;
+    font-size: 18px;
+	color: #444;
+	margin: 0px;
+	background-image: url('img/back.png');
+    background-repeat: repeat;
+}
+.box {
+	padding:5px; 
+    width:460px; 
+	b-order:1px solid;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	h-eight: auto;
+	text-align: justify;
+	vertical-align: top;
+	vertical-align: text-top;
+}
+.block {
+	width: 962px;
+}
+.title {	
+	text-transform: uppercase;
+	font-family: Arimo, Arial, Monospace, courier;
+    font-size: 28px;
+	f-ont-weight: bold;
+	color: #FFE;
+	background-color: #000;
+	
+	margin-left: 5px;
+	margin-right: 5px;
+    margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+    width: 936px; 
+	h-eight: 50px;
+
+	b-order:1px solid;
+	text-align: left;
+	border-radius: 4px;
+}
+.rounded {
+	border-radius: 4px;
+}
+.footer {
+    p-osition: fixed;
+    bottom: 0;
+    width: 100%;
+	
+	background-color: #000;
+	height: 20px;
+	font-size: 12px;
+	text-align: center;
+	padding-top: 5px;
+	color: #FFF;
+}
+
+</style>
+<table align="center" class="block">
+	<tr>
+		<td valign="top">
+			<a href="https://twitter.com/FruityWifi" target="_blank" alt="Twitter" title="Twitter"><img src="img/twitter.png" width="30px" class="rounded"></a>
+			<br>
+			<a href="https://github.com/xtr4nge/FruityWifi/" target="_blank" alt="GitHub" title="GitHub"><img src="img/github.png" width="30px" class="rounded"></a>
+		</td>
+		<td style="background-color: #FFF; margin: 0px;">
+			<div align="right" style="font-family: verdana; padding-right: 10px" id="getting-started"></div>
+			<table width="100%">
+			<tr>
+			<td>
+				<img src="img/logo-480.jpg" width="300px">
+			</td>
+			<td>
+				
+			</td>
+			<td valign="">
+				<div align="right" style="padding-right: 10px; color: #222; font-size: 12px;">
+				<div style="padding-bottom: 2px;">New Release v2.0</div>
+				<!-- START COUNTDOWN -->
+				<script src="countdown.js" type="text/javascript"></script>
+				<script type="application/javascript">
+
+				var myCountdownTest = new Countdown({
+													year	: 2014,
+													month	: 10, 
+													day		: 10,
+													hours	: 18,
+													minutes	: 00,
+													width	: 220, 
+													height	: 50,
+													rangeHi	: "days"
+													});
+
+				</script>
+				<!-- END COUNTDOWN -->
+				</div>
+			</td>
+			</tr>
+			</table>
+
+			<div class="box title">Overview</div>
+
+			<div id="body" class="block">
+				
+				<div id="container_A">
+
+					<div class="box">
+						FruityWifi es una herramienta de codigo abierto para auditoria de redes wireless. 
+						Permite desplegar rapida y facilmente ataques avanzados utilizando la interfaz web o enviandole mensajes.
+						<br><br>
+						Inicialmente la aplicacion fue creada para utilizarse con una Raspberry-Pi, pero puede ser instalada en cualquier sistema basado en Debian. 
+						<br><br>
+						FruityWifi v2.0 trae muchas novedades. Una nueva interfaz, nuevos modulos, soporte para chipsets Realtek, soporte para Mobile Broadband (3G/4G), un nuevo panel de configuracion, y mas.
+					</div>
+					<div class="box">
+						<img src="img/001.png" width="460px" class="rounded">
+					</div>
+					<div class="box">
+						<img src="img/002.png" width="460px" class="rounded">
+					</div>
+					<div class="box">
+						Un panel de configuracion mas flexible. Ahora es posible utilizar FruityWifi combinando diferentes redes: 
+						Ethernet <img src="img/double_arrow.png" width="24px"> Ethernet, 
+						3G/4G <img src="img/double_arrow.png" width="24px"> Ethernet, 
+						Wifi <img src="img/double_arrow.png" width="24px"> Ethernet, etc.
+						<br><br>
+						Entre las nuevas opciones de este panel, encontramos que podemos cambiar el AP de Hostapd a Airmon-ng pudiendo utilizar mas chipsets como por ejemplo placas Realtek.
+						<br><br>
+						Cada una de las interfaces es customizable, pudiendo dejar la configuracion actual o cambiandola completamente.
+					</div>
+
+				</div>
+			</div>
+
+			<div class="box title">Modulos</div>
+			
+			<div id="body" class="block">
+				
+				<div id="container_B">
+
+					<div class="box">
+						FruityWifi se compone de modulos para darle mas flexibilidad. 
+						Estos modulos pueden ser instalados para agregar nuevas funcionalidades.
+						<br><br>
+						Entre los modulos disponibles se encuentran URLsnarf, DNSspoof, Kismet, mdk3, ngrep, nmap, Squid3 y SSLstrip (con funcionalidades para inyectar codigo), Captive Portal, AutoSSH, Meterpreter, Tcpdump y mas.
+					</div>
+					<div class="box">
+						<img src="img/004.png" width="460px" class="rounded">
+					</div>
+					<div class="box">
+						<b>AutoSSH</b>
+						nos permite iniciar una conexion ssh reversa, reanudandola en caso de que detecte que se corte o se pare el trafico. 
+						Es especialmente util para mantener una conexion permantente con la FruityWifi.
+					</div>
+					<div class="box">
+						<img src="img/005.png" width="460px" class="rounded">
+						<br>
+						<img src="img/015.png" width="460px" class="rounded">
+					</div>
+					
+					<div class="box">
+						<b>Meterpreter</b> 
+						es una impresionante utilidad que permite obtener una gran cantidad de informacion sobre un objetivo  comprometido, asi como tambien manipular procesos del sistema y/o terminarlos.
+						Este modulo nos permite desde la FruityWifi, comprometer nuevos equipos y utilizarlos como punto de entrada a otros dispositivos y redes.
+					</div>
+					<div class="box" >
+						<img src="img/006.png" width="460px" class="rounded">
+						<br>
+						<img src="img/007.png" width="460px" class="rounded">
+					</div>
+					<div class="box">
+						<b>Nessus</b>
+						es un programa de escaneo de vulnerabilidades. 
+						Con este modulo podemos escanear equipos desde la FruityWifi, sin necesidad de usar el panel de Nessus.
+						Podemos conocer las vulnerabilidades de cada uno de los equipos conectados a nuestro dispositivo para tener mas detalles de nuestra superficie o comprometerlos.
+					</div>
+					<div class="box" >
+						<img src="img/008.png" width="460px" class="rounded">
+					</div>
+					<div class="box">
+						Entre las nuevas caracteristicas, podemos encontrar que FrutyWifi ahora soporta <b>Mobile Broadband (3G/4G)</b>.
+						Podemos utilizar este modulo para conectar nuestro dongle 3G/4G y proveer a la FruityWifi the accesso a internet sin necesidad de conectarla a una red Wifi o Ethernet.
+					</div>
+					<div class="box" >
+						<img src="img/009.png" width="460px" class="rounded">
+					</div>
+					<div class="box">
+						<b>Tcpdump</b>
+						es un herramienta cuya utilidad principal es analizar el trafico que circula por la red.
+						Con este modulo podemos interceptar el trafico que pasa por nuestro dispositivo, filtrarlo y/o almacenarlo para un analisis posterior.
+					</div>
+					<div class="box" >
+						<img src="img/010.png" width="460px" class="rounded">
+					</div>
+					<div class="box">
+						<b>Ettercap</b>
+						es una utilidad que nos permite capturar el trafico que circula por la red.
+						Utilizado este modulo podemos realizar attaques MITM por medio de ARP poisoning.
+					</div>
+				</div>
+			</div>
+			
+		</td>
+	</tr>
+</table>
+<div class="footer">Copyright (C) 2013-2014  xtr4nge</div>
+<script>
+/*
+$(document).ready(function(){
+	$('#container_A').masonry();
+}).masonry( 'reload' );
+
+$(document).ready(function(){
+	$('#container_B').masonry();
+}).masonry( 'reload' );
+*/
+// or with jQuery
+var $container_A = $('#container_A');
+// initialize Masonry after all images have loaded
+$container_A.imagesLoaded( function() {
+	$container_A.masonry();
+	});
+
+// or with jQuery
+var $container_B = $('#container_B');
+// initialize Masonry after all images have loaded
+$container_B.imagesLoaded( function() {
+	$container_B.masonry();
+	});
+
+</script>
+
+<script type="text/javascript">
+/*
+  $("#getting-started")
+  .countdown("2014/10/10 17:00:00", function(event) {
+    $(this).text(
+      event.strftime('%D days %H:%M:%S')
+    );
+  });
+*/
+</script>
+
+</body>
+</html>
