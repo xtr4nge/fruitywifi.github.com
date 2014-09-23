@@ -85,6 +85,7 @@ body {
 }
 
 </style>
+
 <table align="center" class="block">
 	<tr>
 		<td valign="top">
@@ -229,6 +230,28 @@ body {
 				</div>
 			</div>
 			
+			<div class="box title">Videos</div>
+			
+			<div id="body" class="block">
+				
+				<div id="container_C">
+
+					<div class="box">
+						Instalando <b>FruityWifi</b> (v1.3)
+					</div>
+					<div class="box">
+						FruityWifi + Raspberry Pi + adafruit 16x2 lcd + keypad
+					</div>
+					<div class="box">
+						<iframe width="460" height="280" src="//www.youtube.com/embed/MLsRAfabfJ8" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<div class="box">
+						<iframe width="460" height="280" src="//www.youtube.com/embed/FkQw-_Wlpa0" frameborder="0" allowfullscreen></iframe>
+					</div>
+					
+				</div>
+			</div>
+			
 		</td>
 	</tr>
 </table>
@@ -255,6 +278,13 @@ var $container_B = $('#container_B');
 // initialize Masonry after all images have loaded
 $container_B.imagesLoaded( function() {
 	$container_B.masonry();
+	});
+
+// or with jQuery
+var $container_C = $('#container_C');
+// initialize Masonry after all images have loaded
+$container_C.imagesLoaded( function() {
+	$container_C.masonry();
 	});
 
 </script>
